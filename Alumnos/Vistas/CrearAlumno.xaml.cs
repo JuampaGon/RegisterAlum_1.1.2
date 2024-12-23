@@ -6,7 +6,7 @@ namespace Alumnos.AppMovil.Vistas;
 
 public partial class CrearAlumno : ContentPage
 {
-    FirebaseClient client = new FirebaseClient("https://miprimerproyecto-4e619-default-rtdb.firebaseio.com/");
+    FirebaseClient client = new FirebaseClient("https://alumnosregister-default-rtdb.firebaseio.com/");
 
     public List<Curso> Cursos { get; set; }
     public CrearAlumno()
@@ -40,7 +40,7 @@ public partial class CrearAlumno : ContentPage
         try
         {
             await client.Child("Alumnos").PostAsync(alumno);
-            await DisplayAlert("Éxito", $"El Alumno {alumno.PrimerNombre} {alumno.PrimerApellido} fue guardado correctamente", "OK");
+            await DisplayAlert("Ã‰xito", $"El Alumno {alumno.PrimerNombre} {alumno.PrimerApellido} fue guardado correctamente", "OK");
             await Navigation.PopAsync();
         }
         catch (Exception ex)
