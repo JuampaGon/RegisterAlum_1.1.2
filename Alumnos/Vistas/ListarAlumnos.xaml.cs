@@ -6,7 +6,7 @@ namespace Alumnos.AppMovil.Vistas;
 
 public partial class ListarAlumnos : ContentPage
 {
-    FirebaseClient client = new FirebaseClient("https://miprimerproyecto-4e619-default-rtdb.firebaseio.com/");
+    FirebaseClient client = new FirebaseClient("https://alumnosregister-default-rtdb.firebaseio.com/");
     public ObservableCollection<Alumno> Lista { get; set; } = new ObservableCollection<Alumno>();
     public ListarAlumnos()
     {
