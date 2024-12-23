@@ -26,7 +26,7 @@ namespace Alumnos.AppMovil
         }
         public static void Registrar()
         {
-            FirebaseClient client = new FirebaseClient("https://miprimerproyecto-4e619-default-rtdb.firebaseio.com/");
+            FirebaseClient client = new FirebaseClient("https://alumnosregister-default-rtdb.firebaseio.com/");
 
             var cursos = client.Child("Cursos").OnceAsync<Curso>();
 
